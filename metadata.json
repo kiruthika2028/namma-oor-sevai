@@ -1,0 +1,6 @@
+{
+  "name": "LocalConnect (namma ஊர் சேவைகள்)",
+  "description": "A community service directory powered by Firebase Firestore connecting village and small town residents with verified local electricians, plumbers, tailors, tutors, carpenters, and drivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,83 @@
+<div class="min-h-screen flex flex-col bg-amber-50/30 text-stone-900 selection:bg-amber-600 selection:text-white">
+  <!-- Sticky Multilingual Navigation Bar -->
+  <app-navbar></app-navbar>
+
+  <!-- Main View Area -->
+  <main class="flex-1">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Community Footer -->
+  <footer class="bg-stone-900 text-stone-300 border-t border-amber-900/40 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- App Col -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold">
+              <mat-icon class="text-xl">handyman</mat-icon>
+            </div>
+            <span class="text-xl font-extrabold text-white tracking-tight">LocalConnect</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-amber-900/60 text-amber-300 font-semibold border border-amber-800">
+              {{ lang.t().appSubtitle }}
+            </span>
+          </div>
+          
+          <p class="text-stone-400 text-sm max-w-md leading-relaxed font-normal">
+            {{ lang.t().tagline }}. Empowering rural self-reliance and connecting honest skilled workers with neighborhood households.
+          </p>
+
+          <div class="inline-flex items-center gap-2 text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-800/80 px-3 py-1 rounded-full font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Offline-Ready • Browser Local Storage Persisted</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-2.5">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Explore Services</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-stone-400">
+            <li><a routerLink="/services" [queryParams]="{ skill: 'Electrician' }" class="hover:text-amber-400 transition-colors">Electricians</a></li>
+            <li><a routerLink="/services" [queryParams]="{ skill: 'Plumber' }" class="hover:text-amber-400 transition-colors">Plumbers</a></li>
+            <li><a routerLink="/services" [queryParams]="{ skill: 'Tailor' }" class="hover:text-amber-400 transition-colors">Tailors & Aari Work</a></li>
+            <li><a routerLink="/services" [queryParams]="{ skill: 'Carpenter' }" class="hover:text-amber-400 transition-colors">Carpenters</a></li>
+            <li><a routerLink="/services" [queryParams]="{ skill: 'Auto Driver' }" class="hover:text-amber-400 transition-colors">Auto Drivers</a></li>
+          </ul>
+        </div>
+
+        <!-- Portals & Actions -->
+        <div class="space-y-2.5">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Portals & Roles</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-stone-400">
+            <li>
+              <a routerLink="/services" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <mat-icon class="text-xs text-amber-500">search</mat-icon>
+                {{ lang.t().findServices }}
+              </a>
+            </li>
+            <li>
+              <a routerLink="/register" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <mat-icon class="text-xs text-amber-500">person_add</mat-icon>
+                {{ lang.t().registerProvider }}
+              </a>
+            </li>
+            <li>
+              <a routerLink="/admin" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <mat-icon class="text-xs text-amber-500">admin_panel_settings</mat-icon>
+                {{ lang.t().adminPanel }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-stone-800 text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© {{ currentYear }} LocalConnect (namma ஊர் சேவைகள்) • Designed for Rural Community Trust</p>
+        <p class="text-stone-400">Pure Local Storage • Zero External Tracking</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
